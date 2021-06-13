@@ -26,11 +26,11 @@ def game_status_check(l):
     print(k)
     for i in range(8):
         if(k[i][0] == 3):
-            return "Player-1 is the winner"
+            return ["Player-1 is the winner", i]
         elif(k[i][1] == 3):
-            return "Player-2 is the winner"
+            return ["Player-2 is the winner", i]
     
     if(no_of_blank_boxes != 0):
-        return "Can continue"
+        return ["Can continue",-1]
     else:
-        return "Draw"
+        return ["Draw",-1]
