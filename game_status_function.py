@@ -12,7 +12,7 @@ def game_status_check(l):
                 k[i+3][0] += 1
             elif(l[j][i] == 'O'):
                 k[i+3][1]+=1
-            if(l[i][j] not in numbers):
+            if(l[i][j] in numbers):
                 no_of_blank_boxes += 1
         if(l[i][i] == 'X'):
             k[6][0] += 1
