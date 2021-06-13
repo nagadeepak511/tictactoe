@@ -1,9 +1,47 @@
 
-MainWidget:
+scm:
+    Home:
+        name: "Home Screen"
+    Game:
+        name: "Game Screen"
+        MainWidget:
+
+
+<Home>:
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Home screen"
+            size_hint: 1, 0.2
+            font_name: "Lcd.ttf"
+            font_size: 50
+            color: 0,0,1,1
+        Label:
+            text: "To place X or O click on any poition\nPlayer-1 --> 'X'\nPlayer-2 --> 'O'\nAll the rules of TicTacToe are valid for this game\ni.e.In order to win the game,\n a player must place three of their marks\n in a horizontal, vertical, or diagonal row. "
+            size_hint: 1, 0.6
+            font_size: 20
+        Button:
+            text: "Continue to the game screen"
+            size_hint: 0.5, 0.2
+            pos_hint: {"center_x": 0.5, "center_y": 0.1}
+            on_press: 
+                app.root.current = "Game Screen"
+                root.manager.transition.direction = "left"
+    
 <MainWidget>:
     Label:
         text: root.label_text
-        size_hint: [1,0.25]
+        size_hint: [1,0.15]
         font_name: "Lcd.ttf"
         font_size: 40
         color: 1,0.5,1,1
+    Button:
+        text:"Go back"
+        size_hint: 0.5,0.1
+        on_press: 
+            app.root.current = "Home Screen"
+            app.root.transition.direction = "right"
+    Button:
+        text: "Reset board"
+        size_hint: 0.5, 0.1
+        on_press: root.reset_board()
