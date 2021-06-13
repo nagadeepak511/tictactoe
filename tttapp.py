@@ -67,15 +67,19 @@ class MainWidget(StackLayout):
                             if(status[1] < 3):
                                 if(i == status[1]):
                                     self.btns[i][j].disabled = False
+                                    self.btns[i][j].color = [0,0,1,1]
                             elif(status[1] < 6):
                                 if(i+3 == status[1]):
                                     self.btns[j][i].disabled = False
+                                    self.btns[j][i].color = [0,0,1,1]
                             elif(status[1] == 6):
                                 if(i == j):
                                     self.btns[i][j].disabled = False
+                                    self.btns[i][j].color = [0,0,1,1]
                             elif(status[1] == 7):
                                 if(i+j == 2):
                                     self.btns[i][j].disabled = False
+                                    self.btns[i][j].color = [0,0,1,1]
                 disable_function = True
                 
 
