@@ -1,4 +1,3 @@
-from logging import disable
 from typing import Tuple
 from game_status_function import game_status_check
 from kivy.app import App
